@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TechPulse</title>
+    <meta name="description" content="Get in touch with the TechPulse team for inquiries, tips, or collaborations.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Google tag (gtag.js) GA4 Tracking Snippet -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="TechPulse Logo" class="nav-brand-logo">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 4rem; padding-bottom: 4rem; min-height: 80vh;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 class="single-title"><span class="gradient-text">Get in Touch</span></h1>
+            <p class="article-desc">Have a question, a tip for a story, or want to collaborate? Fill out the form below.</p>
+        </div>
+
+        <div class="glass contact-form" style="padding: 2.5rem;">
+            <div id="formSuccess" class="form-success">
+                <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Your message has been sent successfully. We will get back to you shortly!
+            </div>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    <div id="nameError" class="form-error">Please enter your name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    <div id="emailError" class="form-error">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+                    <div id="messageError" class="form-error">Please enter a message.</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 14px;">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="logo.svg" alt="TechPulse Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+                <p class="footer-desc">Delivering cutting-edge insights on AI, cybersecurity, web development, and the tech shaping our future.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="articles.html?category=ai">AI & Machine Learning</a></li>
+                    <li><a href="articles.html?category=web">Web Development</a></li>
+                    <li><a href="articles.html?category=cyber">Cybersecurity</a></li>
+                    <li><a href="articles.html?category=gadgets">Gadgets & Hardware</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechPulse Blog. Built with vanilla HTML, CSS, and JS.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

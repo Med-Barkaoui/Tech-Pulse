@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS Comeback | TechPulse</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="TechPulse Logo" class="nav-brand-logo">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="articles.html" class="active">Articles</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="container single-article">
+        <header class="single-header">
+            <div class="article-tags" style="justify-content: center;"><span class="tag web">Web Dev</span></div>
+            <h1 class="single-title">Why Vanilla JavaScript is Making a Huge Comeback</h1>
+            <div class="single-meta">
+                <span><i class="far fa-user"></i> By <a href="about.html" style="color:var(--accent)">Sarah Chen</a></span>
+                <span><i class="far fa-calendar-alt"></i> October 12, 2026</span>
+                <span><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200&ixlib=rb-4.0.3" alt="Web Development Code" class="single-image">
+
+        <div class="article-body">
+            <p>For the last decade, the frontend web development ecosystem was defined by massive UI frameworks. React, Angular, Vue, and Svelte dominated the landscape. Developers were taught to immediately run <code>npx create-react-app</code> or <code>npm create vite</code> before writing a single line of business logic.</p>
+            <p>But the tide is turning. Framework fatigue is real, and the complexity overhead is becoming harder to justify for standard applications. Welcome to the Vanilla JS renaissance.</p>
+
+            <h2>The Cost of Complexity</h2>
+            <p>Frameworks introduced necessary innovations—component architectures, reactive state, and virtual DOMs—but they came at a cost. Huge bundle sizes, convoluted build steps, and an endless treadmill of dependency updates. A simple blog now requires a Node.js server to build static HTML. For many developers, the cognitive load has surpassed the benefit.</p>
+            
+            <h2>Native Browser APIs Have Caught Up</h2>
+            <p>The primary reason Vanilla JS is viable again is that native browser APIs are fantastic now. You no longer need a library to perform basic tasks:</p>
+            <ul>
+                <li><strong><code>document.querySelector</code></strong> replaced jQuery decades ago, but its speed is unmatched now.</li>
+                <li><strong>Web Components</strong> allow you to build encapsulated, reusable UI elements natively, completely bypassing React's component model.</li>
+                <li><strong>CSS Variables and native nesting</strong> have removed the absolute necessity of CSS-in-JS solutions.</li>
+                <li><strong>Native ES Modules (<code>import</code> / <code>export</code>)</strong> mean you don't always need a bundler like Webpack to organize your code.</li>
+            </ul>
+
+            <h2>Performance Trumps Trendiness</h2>
+            <p>When you drop the 100kb+ runtime of a modern framework, your website loads instantly. Time-to-Interactive (TTI) plummets. Your Lighthouse scores reach 100 effortlessly. We rebuilt our entire internal dashboard using plain HTML, CSS, and JavaScript. The result? A 70% decrease in initial load times and a developer experience unbound by "framework rules."</p>
+
+            <pre><code>// Creating a functional Web Component natively
+class CustomButton extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.shadowRoot.innerHTML = `
+            &lt;style&gt;
+                button { background: #6366f1; color: white; padding: 10px 20px; border-radius: 5px; }
+            &lt;/style&gt;
+            &lt;button&gt;&lt;slot&gt;&lt;/slot&gt;&lt;/button&gt;
+        `;
+    }
+}
+customElements.define('custom-button', CustomButton);
+</code></pre>
+
+            <h2>Conclusion</h2>
+            <p>Frameworks definitely still have a place in heavily interactive unified web applications (like Figma or complex dashboards). However, the default choice for content sites, blogs, portfolios, and even traditional e-commerce is rapidly shifting back to basics: Vanilla JS.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="logo.svg" alt="TechPulse Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+                <p class="footer-desc">Delivering cutting-edge insights on AI, cybersecurity, web development, and the tech shaping our future.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechPulse Blog. Built with vanilla HTML, CSS, and JS.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

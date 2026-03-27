@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust Architecture | TechPulse</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="TechPulse Logo" class="nav-brand-logo">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="articles.html" class="active">Articles</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="container single-article">
+        <header class="single-header">
+            <div class="article-tags" style="justify-content: center;"><span class="tag cyber">CyberSec</span></div>
+            <h1 class="single-title">Zero Trust Architecture: A Practical Implementation Guide</h1>
+            <div class="single-meta">
+                <span><i class="far fa-user"></i> By <a href="about.html" style="color:var(--accent)">David Okoye</a></span>
+                <span><i class="far fa-calendar-alt"></i> October 10, 2026</span>
+                <span><i class="far fa-clock"></i> 9 min read</span>
+            </div>
+        </header>
+
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200&ixlib=rb-4.0.3" alt="Cybersecurity Lock" class="single-image">
+
+        <div class="article-body">
+            <p>It's the ultimate cybersecurity buzzword, but moving past vendor pitches to actual deployment is where most IT teams struggle. Zero Trust Architecture (ZTA) replaces the outdated "castle and moat" strategy, assuming the network is always hostile and that threats exist both inside and outside the perimeter.</p>
+
+            <h2>The Philosophy: Never Trust, Always Verify</h2>
+            <p>Traditional security relied on VPNs: once you authenticated past the firewall, you had free rein. Zero Trust demands micro-segmentation and continuous authentication. You don't just log in once; your identity, device posture, and context are verified at every single application boundary.</p>
+
+            <h2>1. Identity as the New Perimeter</h2>
+            <p>Strong Identity and Access Management (IAM) is the foundation of Zero Trust. This requires rolling out Phishing-Resistant MFA (like FIDO2 security keys or WebAuthn) across the entire enterprise. Passwords are no longer sufficient.</p>
+
+            <h2>2. Device Health Verification</h2>
+            <p>It's not enough to know the user's identity; you must trust their device. A Zero Trust gateway evaluates the security posture of the endpoint making the request. Is the OS updated? Is disk encryption enabled? Is the endpoint protection agent running? If the device fails the health check, access to sensitive data is denied, even if the user provides the correct MFA token.</p>
+
+            <h2>3. Micro-Segmentation</h2>
+            <p>Network lateral movement is the primary way ransomware spreads. Micro-segmentation breaks down the network into secure zones, applying security policies to individual workloads. Even if an attacker compromises a server, they cannot communicate with adjacent servers without explicit permission.</p>
+
+            <h2>Practical Implementation Steps</h2>
+            <ol>
+                <li><strong>Map your transaction flows:</strong> Document how users interact with applications and how applications interact with databases.</li>
+                <li><strong>Build an identity fabric:</strong> Consolidate your IAM and enforce strict SSO and MFA.</li>
+                <li><strong>Deploy a Zero Trust Network Access (ZTNA) gateway:</strong> Use modern solutions (like Cloudflare Access or Zscaler) to hide your private applications from the public internet.</li>
+                <li><strong>Implement continuous monitoring:</strong> Log everything and use AI-driven anomaly detection to revoke sessions instantly upon suspicious behavior.</li>
+            </ol>
+
+            <p>Zero Trust isn't a product you can buy—it's an operational mindset. By fundamentally shifting trust away from IP addresses and onto authenticated, healthy entities, an organization can effectively neutralize modern cyber threats.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="logo.svg" alt="TechPulse Logo" style="height: 30px; vertical-align: middle; margin-right: 8px;">
+                    <span class="gradient-text">TechPulse</span>
+                </a>
+                <p class="footer-desc">Delivering cutting-edge insights on AI, cybersecurity, web development, and the tech shaping our future.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechPulse Blog. Built with vanilla HTML, CSS, and JS.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
