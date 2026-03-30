@@ -69,46 +69,4 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Fichiers JS -->
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/script.js</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/analytics.js</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Fichiers CSS -->
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/style.css</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Fichiers SVG / tracking -->
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/logo.svg</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/favicon.svg</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://med-barkaoui.github.io/Tech-Pulse/googlea545ec7398a5e9d7.html</loc>
-    <lastmod>2026-03-30</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
 </urlset>
